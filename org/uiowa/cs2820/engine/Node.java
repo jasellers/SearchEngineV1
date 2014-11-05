@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class Node {
   // Node is a basic unit in the database
   byte[] Key;  // Key of this node for lookup
-  ArrayList<String> Identifiers;
-  int size;    // not yet implemented
+  public ArrayList<String> Identifiers; // have to refractor to byteList
+  int size;    // for byte List
   
   Node(byte[] f, String id) {
 	this.Key = f;
@@ -15,7 +15,7 @@ public class Node {
     }
   
   public void add(String id) { 
-	Identifiers.remove(id);  // does nothing if id not already there
+	Identifiers.remove(id);
 	Identifiers.add(id);
     }
   
@@ -23,7 +23,15 @@ public class Node {
 	Identifiers.remove(id);
     }
   
+
   public int getSize() {
-	return size;
+	return Identifiers.size(); // should be byte, testing with ArrayList
     }
+  
+  /**
+  public String toString() {
+	  
+  }
+  */
+  
   }

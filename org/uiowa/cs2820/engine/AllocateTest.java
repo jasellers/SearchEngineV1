@@ -2,17 +2,11 @@ package org.uiowa.cs2820.engine;
 
 import static org.junit.Assert.*;
 
-import org.junit.Before;
 import org.junit.Test;
 
 public class AllocateTest {
 	
-	private Allocate testAllocate;
-	
-	@Before
-	public void setUp() {
-		testAllocate = new Allocate();
-	}
+	private Allocate testAllocate = new Allocate();
 	
 	@Test
 	public void empty_allocate_test() {
@@ -29,6 +23,11 @@ public class AllocateTest {
 		assertEquals(area, 10);
 	}
 	
-
+	@Test
+	public void free_area_test() {
+		testAllocate.freeArea(4);
+		testAllocate.freeArea(10);
+		assertEquals(testAllocate.size(), 8);
+	}
 
 }

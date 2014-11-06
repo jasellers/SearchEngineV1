@@ -10,7 +10,7 @@ public class Checkpoint {
 	
 	public static void save(Object obj) {
 		// change if needed
-		String filepath = "/Users/maryfeng/Desktop/checkpoint.txt";
+		String filepath = "checkpoint.txt";
 		// file to write to
 		File file = new File(filepath);
 		// byte array to write to file

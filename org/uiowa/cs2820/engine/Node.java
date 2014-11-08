@@ -28,10 +28,15 @@ public class Node {
 	return Identifiers.size(); // should be byte, testing with ArrayList
     }
   
-  /**
-  public String toString() {
-	  
+  
+  public ArrayList getIdentifiers() {
+	  // have to call value storage
+	  ArrayList getid = new ArrayList();
+	  for (int i = 0; i < Identifiers.size(); i ++) { 
+		  getid.add(Identifiers.get(i));
+	  }
+	  return getid; 
   }
-  */
+  
   
   }

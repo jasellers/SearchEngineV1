@@ -8,6 +8,10 @@ public class Node {
   public ArrayList<String> Identifiers; // have to refractor to byteList
   int size;    // for byte List
   
+  int next = -1; //for Storage class
+  int prev = -1; //for Storage class
+  int location; //for Storage class
+  
   Node(byte[] f, String id) {
 	this.Key = f;
 	this.Identifiers = new ArrayList<String>();
